@@ -1,0 +1,12 @@
+<launch>	
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find asr_mild_base_launch_files)/log/rosconsole.config" />
+    <node name="sick" pkg="asr_mild_base_laserscanner" type="asr_mild_base_laserscanner" output="screen" required="true"/>
+    <param name="topic" value="scan" />
+    <!-- Laserscanner baudrate. Only four values: 9600, 19200, 38400, 500000. 38400 means 4 complete measurements in 1 sec. -->
+    <param name="baudrate" value="500000" />
+    <param name="serial" value="/dev/rs422b" />
+    <param name="init_attempts" value="10" />
+    <node name="can" pkg="asr_mild_base_driving" type="asr_mild_base_driving" output="screen" required="true"/>
+    <!-- Speedup of the mild. 1 = normal velocity. 2 = double velocity. Float value. -->
+    <param name="velocity" value="1" />
+ </launch>
