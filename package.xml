@@ -6,6 +6,7 @@
   <author>Borella Jocelyn, Dehmani Souheil, Marek Felix, Mayr Matthias</author>
   <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer> 
   <license>BSD</license>
+  <url type="website">http://wiki.ros.org/asr_mild_base_launch_files</url>
  
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
